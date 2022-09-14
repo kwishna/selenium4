@@ -15,8 +15,8 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
 				dryRun = false,
 				monochrome = true,
-				features = "src/test/java/features",
-				glue = {"features.step_definitions"},
+				features = {"src/test/java/features"},
+				glue = {"features.step_definitions", "features.extras"},
 				tags = "@smoke",
 				plugin = {
 						"progress",

@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a027f60-b251-471f-8e29-11be8b527e72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="4a027f60-b251-471f-8e29-11be8b527e72" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/step_definitions/SearchStepsJ8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/step_definitions/SearchStepsJ8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberWithJUnitRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberWithJUnit4Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberWithTestNGRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberWithTestNGRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,17 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "F:/ABD/GitHub/Selenium4/src/test/java/org/example/runner",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/ABD/GitHub/Selenium4/src/test/java/org/example/runner&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\ABD\GitHub\Selenium4\src\test\java\org\example\runner" />
@@ -57,32 +55,14 @@
       <recent name="F:\ABD\GitHub\Selenium4\src\test\java\features\stepDefs" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="features.extras" />
       <recent name="org.example.runner" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CucumberWithJUnitRunner">
+  <component name="RunManager" selected="TestNG.CucumberWithTestNGRunner (1)">
     <configuration name="MasterThoughtReport" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MasterThoughtReport" />
       <module name="Selenium4" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Valid Google Search" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/GoogleSearch.feature" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Selenium4" />
-      <option name="NAME_FILTER" value="^Valid Google Search$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Valid Google Search$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Valid Google Search" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,7 +82,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CucumberWithJUnitRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CucumberWithJUnit4Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Selenium4" />
       <extension name="coverage">
         <pattern>
@@ -111,8 +91,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.runner" />
-      <option name="MAIN_CLASS_NAME" value="org.example.runner.CucumberWithJUnitRunner" />
+      <option name="MAIN_CLASS_NAME" value="org.example.runner.CucumberWithJUnit4Runner" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CucumberWithTestNGRunner (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.runner" />
+      <option name="MAIN_CLASS_NAME" value="org.example.runner.CucumberWithTestNGRunner" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CucumberWithJUnitRunner" />
+        <item itemvalue="TestNG.CucumberWithTestNGRunner (1)" />
+        <item itemvalue="JUnit.CucumberWithJUnit4Runner" />
         <item itemvalue="JUnit.CucumberJunit5Test" />
         <item itemvalue="Application.MasterThoughtReport" />
         <item itemvalue="TestNG.CucumberWithTestNGRunner" />
-        <item itemvalue="Cucumber Java.Scenario: Valid Google Search" />
       </list>
     </recent_temporary>
   </component>
@@ -153,6 +150,14 @@
       <option name="presentableId" value="Default" />
       <updated>1663110973071</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1663125644192</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663125644192</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,5 +170,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>

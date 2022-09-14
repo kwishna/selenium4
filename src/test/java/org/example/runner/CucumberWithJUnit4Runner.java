@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 				dryRun = false,
 				monochrome = true,
-				features = "src/test/java/features",
+				features = {"src/test/java/features"},
 				glue = {"features.step_definitions"},
 				tags = "@smoke",
 				plugin = {
@@ -33,5 +33,5 @@ import org.junit.runner.RunWith;
 				snippets = CucumberOptions.SnippetType.CAMELCASE
 		)
 
-public class CucumberWithJUnitRunner {
+public class CucumberWithJUnit4Runner {
 }

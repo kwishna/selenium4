@@ -141,8 +141,8 @@
                     <forkCount>1</forkCount>
                     <reuseForks>false</reuseForks>
                     <parallel>methods</parallel>
-<!--                    <parallel>classes</parallel>-->
-<!--                    <parallel>classesAndMethods</parallel>-->
+                    <!--                    <parallel>classes</parallel>-->
+                    <!--                    <parallel>classesAndMethods</parallel>-->
                     <useUnlimitedThreads>true</useUnlimitedThreads>
                     <includes>
                         <include>**/*Test*.java</include>
@@ -150,12 +150,12 @@
                     <systemPropertyVariables>
                         <cucumber.filter.tags>@smoke</cucumber.filter.tags>
                     </systemPropertyVariables>
-                  <properties>
-                    <property>
-                      <name>dataproviderthreadcount</name>
-                      <value>20</value>
-                    </property>
-                  </properties>
+                    <properties>
+                        <property>
+                            <name>dataproviderthreadcount</name>
+                            <value>20</value>
+                        </property>
+                    </properties>
                 </configuration>
                 <executions>
                     <execution>
@@ -163,6 +163,34 @@
                             <goal>integration-test</goal>
                             <goal>verify</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.1.0</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>read-project-properties</goal>
+                            <goal>set-system-properties</goal>
+                        </goals>
+                        <configuration>
+                            <files>
+                                <file>etc/config/dev.properties</file> <!-- Loads Properties From File. -->
+                            </files>
+                            <urls>
+                                <url>classpath:/config/dev.properties</url> <!-- Loads Properties From File. -->
+                            </urls>
+                            <properties>
+                                <property>
+                                    <name>key</name>
+                                    <value>value</value>
+                                </property>
+                            </properties>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
