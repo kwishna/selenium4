@@ -116,6 +116,27 @@
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.7.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.3.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -138,7 +159,7 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>3.0.0-M7</version>
                 <configuration>
-                    <forkCount>1</forkCount>
+                    <forkCount>4</forkCount>
                     <reuseForks>false</reuseForks>
                     <parallel>methods</parallel>
                     <!--                    <parallel>classes</parallel>-->
@@ -153,7 +174,7 @@
                     <properties>
                         <property>
                             <name>dataproviderthreadcount</name>
-                            <value>20</value>
+                            <value>10</value>
                         </property>
                     </properties>
                 </configuration>
@@ -179,10 +200,11 @@
                         </goals>
                         <configuration>
                             <files>
-                                <file>etc/config/dev.properties</file> <!-- Loads Properties From File. -->
+                                <file>src/test/resources/cucumber.properties</file> <!-- Loads Properties From File. -->
                             </files>
                             <urls>
-                                <url>classpath:/config/dev.properties</url> <!-- Loads Properties From File. -->
+                                <url>classpath:/src/test/resources/junit-platform.properties
+                                </url> <!-- Loads Properties From File. -->
                             </urls>
                             <properties>
                                 <property>

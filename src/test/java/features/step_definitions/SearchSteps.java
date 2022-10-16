@@ -18,6 +18,8 @@ import java.util.stream.Stream;
 
 public class SearchSteps {
 
+    //https://cucumber.io/docs/cucumber/configuration/?lang=java
+
     @DataTableType
     public Grocery defineGrocery(Map<String, String> entry) {
         return new Grocery(entry.get("name"), SearchSteps.Price.fromString(entry.get("price")));

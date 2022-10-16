@@ -33,6 +33,6 @@ build/
 
 ### VS Code ###
 .vscode/
-
+.idea/*.xml
 ### Mac OS ###
 .DS_Store
