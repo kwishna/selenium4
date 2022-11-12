@@ -36,3 +36,5 @@ build/
 .idea/*.xml
 ### Mac OS ###
 .DS_Store
+/src/main/java/learnings/selenium4official/
+/src/main/java/learnings/Selenium4Examples.zip
