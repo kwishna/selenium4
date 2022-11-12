@@ -13,7 +13,10 @@ import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.AbstractDriverOptions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.safari.SafariOptions;
 
 import java.nio.file.Files;
@@ -22,6 +25,7 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
 
 public class CapabilitiesManager {
     private static final boolean HEADLESS = Boolean.parseBoolean(PropertyReader.getConfig("HEADLESS"));
@@ -73,18 +77,18 @@ public class CapabilitiesManager {
                 options.setCapability("browserName", bStackProps.getValue("BROWSERSTACK_BROWSER_NAME"));
                 options.setCapability("browserVersion", bStackProps.getValue("BROWSERSTACK_BROWSER_VERSION"));
 
-                HashMap<String, Object> browserstackOptions = new HashMap<>();
-                browserstackOptions.put("os", bStackProps.getValue("BROWSERSTACK_OS"));
-                browserstackOptions.put("osVersion", bStackProps.getValue("BROWSERSTACK_OS_VERSION"));
-                browserstackOptions.put("projectName", PROJECT_NAME);
-                browserstackOptions.put("debug", "true");
-                browserstackOptions.put("video", "true");
-                browserstackOptions.put("consoleLogs", "info");
-                browserstackOptions.put("buildName", BUILD_NAME);
-                browserstackOptions.put("networkLogs", "true");
-                browserstackOptions.put("seleniumLogs", "true");
-                browserstackOptions.put("resolution", bStackProps.getValue("BROWSERSTACK_RESOLUTION"));
-                options.setCapability("bstack:options", browserstackOptions);
+                HashMap<String, Object> bstackOptions = new HashMap<>();
+                bstackOptions.put("os", bStackProps.getValue("BROWSERSTACK_OS"));
+                bstackOptions.put("osVersion", bStackProps.getValue("BROWSERSTACK_OS_VERSION"));
+                bstackOptions.put("projectName", PROJECT_NAME);
+                bstackOptions.put("debug", "true");
+                bstackOptions.put("video", "true");
+                bstackOptions.put("consoleLogs", "info");
+                bstackOptions.put("buildName", BUILD_NAME);
+                bstackOptions.put("networkLogs", "true");
+                bstackOptions.put("seleniumLogs", "true");
+                bstackOptions.put("resolution", bStackProps.getValue("BROWSERSTACK_RESOLUTION"));
+                options.setCapability("bstack:options", bstackOptions);
             }
             return options;
         }
@@ -143,6 +147,9 @@ public class CapabilitiesManager {
                        'geo.provider.use_corelocation': false,
                        'geo.prompt.testing': true,
                        'geo.prompt.testing.allow': true,
+                       'devtools.debugger.remote-enabled': true,
+                       'devtools.debugger.prompt-connection': false,
+                       'devtools.chrome.enabled': true
                      }
                    }
                    // SET Edge options
@@ -163,8 +170,14 @@ https://chromedriver.chromium.org/capabilities
             chromePrefs.put("plugins.always_open_pdf_externally", true);
             chromePrefs.put("credentials_enable_service", false);
             options.setExperimentalOption("prefs", chromePrefs);
+
+//            Map<String, Object> perfLogPrefs = new HashMap<>();
+//            perfLogPrefs.put("traceCategories", "browser,devtools.timeline,devtools");
+//            perfLogPrefs.put("enableNetwork", true);
+//            options.setExperimentalOption("perfLoggingPrefs", perfLogPrefs);
+
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-            options.setExperimentalOption("useAutomationExtension", false);
+//            options.setExperimentalOption("useAutomationExtension", false); // Deprecated!
             options.addArguments("disable-infobars");
 
             if (EXE_BINARY_ENABLED) {
@@ -193,17 +206,16 @@ https://chromedriver.chromium.org/capabilities
             }
 
             options.addArguments(DRIVER_ARGUMENTS.split(";"));
-
             return options;
         }
     }
 
     private static class ChromeCapabilities {
         static ChromeOptions getOptions() {
-
             ChromeOptions options = new ChromeOptions();
             options.setHeadless(HEADLESS);
-            options.setLogLevel(ChromeDriverLogLevel.ALL);
+//            options.setLogLevel(ChromeDriverLogLevel.ALL);
+            options.setLogLevel(ChromeDriverLogLevel.WARNING);
             options.setPlatformName(Platform.WINDOWS.name());
 
             return options;

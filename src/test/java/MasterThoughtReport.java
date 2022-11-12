@@ -1,3 +1,4 @@
+/*
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import net.masterthought.cucumber.Reportable;
@@ -46,3 +47,4 @@ public class MasterThoughtReport {
 // and here validate 'result' to decide what to do if report has failed
     }
 }
+*/

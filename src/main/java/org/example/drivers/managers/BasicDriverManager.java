@@ -17,21 +17,16 @@ import org.openqa.selenium.safari.SafariOptions;
 
 public class BasicDriverManager {
 
-    private static final ThreadLocal<WebDriver> DRIVER = ThreadLocal.withInitial(() -> null);
-
-    public static WebDriver getBasicDriver(Browsers browser) {
-        if (DRIVER.get() == null) {
-            WebDriver driver = switch (browser) {
-                case CHROME -> getChromeDriver();
-                case FIREFOX, MOZILLA, GECKO -> getFirefoxDriver();
-                case EDGE -> getEdgeDriver();
-                case IE -> getIEDriver();
-                case SAFARI -> getSafariDriver();
-                default -> throw new RuntimeException("No Match Found For The Provided Browser : " + browser);
-            };
-            DRIVER.set(driver);
-        }
-        return DRIVER.get();
+    public static WebDriver getDriver(Browsers browser) {
+        System.out.println("Using BasicDriverManager!");
+        return switch (browser) {
+            case CHROME -> getChromeDriver();
+            case FIREFOX, MOZILLA, GECKO -> getFirefoxDriver();
+            case EDGE -> getEdgeDriver();
+            case IE -> getIEDriver();
+            case SAFARI -> getSafariDriver();
+            default -> throw new RuntimeException("No Match Found For The Provided Browser : " + browser);
+        };
     }
 
     private static ChromeDriver getChromeDriver() {

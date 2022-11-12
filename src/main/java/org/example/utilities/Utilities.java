@@ -10,7 +10,7 @@ import com.google.common.io.Files;
 
 public class Utilities {
 
-    private String filePath;    // = "../Selenium_Assignment_1/Resources/outputFiles/";
+    private String filePath;
     private FileWriter fwr = null;
 
     public static void saveScreenshot(File screenshot) throws IOException {
@@ -47,7 +47,7 @@ public class Utilities {
 
     public void saveIntoFile(String fileName, String data) throws IOException {
 
-        filePath = System.getProperty("user.dir") + "/Resources/outputFiles/";
+        filePath = System.getProperty("user.dir") + "/media/";
 
         if (!fileName.endsWith(".txt")) {
 
@@ -62,7 +62,7 @@ public class Utilities {
 
     public void saveIntoFile(String data) throws IOException {
 
-        filePath = System.getProperty("user.dir") + "/Resources/outputFiles/";
+        filePath = System.getProperty("user.dir") + "/media/";
 
         fwr = new FileWriter(filePath + "MessageFile.txt", true);
         fwr.write(data + "\n");

@@ -9,8 +9,9 @@ public class ServiceDriverManager {
 
     private static final ThreadLocal<RemoteWebDriver> DRIVER = ThreadLocal.withInitial(() -> null);
 
-    private static RemoteWebDriver getServiceDriver(Browsers browser) {
+    public static RemoteWebDriver getDriver(Browsers browser) {
         if (DRIVER.get() == null) {
+            System.out.println("Using ServiceDriverManager!");
             DRIVER.set(new RemoteWebDriver(ServiceManager.startBrowserService(browser), CapabilitiesManager.getBrowserCapabilities(browser)));
         }
         return DRIVER.get();

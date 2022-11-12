@@ -1,4 +1,4 @@
-package org.example.runner;
+/*package org.example.runner;
 
 import static io.cucumber.junit.platform.engine.Constants.*;
 
@@ -11,12 +11,12 @@ import org.junit.platform.suite.api.Suite;
 @IncludeEngines("cucumber")
 //@SelectDirectories("src/test/java/features")
 //@SelectClasspathResource("io/github/bonigarcia")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "features.step_definitions")
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "org.example.step_definitions")
 @ConfigurationParameter(key = FEATURES_PROPERTY_NAME, value = "src/test/java/features")
 @ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@smoke")
 public class CucumberJunit5Test {
 
-}
+}*/
 /*
 Alternate Ways To Pass Cucumber Parameters:-
 1) mvn -Dtest="org.example.runner.CucumberJunit5Test" test

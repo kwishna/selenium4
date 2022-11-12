@@ -5,11 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a027f60-b251-471f-8e29-11be8b527e72" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/step_definitions/SearchStepsJ8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/step_definitions/SearchStepsJ8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberWithJUnitRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberWithJUnit4Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberWithTestNGRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberWithTestNGRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/capabilities/CapabilitiesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/capabilities/CapabilitiesManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drivers/WebDriversManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/drivers/WebDriversManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drivers/managers/BasicDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/drivers/managers/BasicDriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drivers/managers/BonagarciaDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/drivers/managers/BonagarciaDriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drivers/managers/RemoteDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/drivers/managers/RemoteDriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drivers/managers/ServiceDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/drivers/managers/ServiceDriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/drivers/service/ServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/drivers/service/ServiceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/PropertyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/PropertyReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilities/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MasterThoughtReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MasterThoughtReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/GoogleSearch.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/GoogleSearch.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/extras/Hooks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/extras/HooksJava8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/extras/ParameterTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/step_definitions/SearchSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/step_definitions/SearchStepsJ8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberJunit5Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberJunit5Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberWithJUnit4Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberWithJUnit4Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/runner/CucumberWithTestNGRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/runner/FailedScenarioRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/runner/FailedScenarioRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,15 +40,25 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/4.4.0/selenium-remote-driver-4.4.0-sources.jar!/org/openqa/selenium/remote/RemoteWebDriver.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCucumberState">
+    <option name="selection" value="" />
   </component>
   <component name="ProjectId" id="2EjZURyc98MZIcUDBtVvrT4Ju9L" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -40,104 +71,162 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/ABD/GitHub/Selenium4/src/test/java/org/example/runner&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/ABD/GitHub/Selenium4/src/main/java/learnings&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\ABD\GitHub\Selenium4\src\test\java\org\example\runner" />
-      <recent name="F:\ABD\GitHub\Selenium4\src\test\java\org\example" />
+      <recent name="F:\ABD\GitHub\Selenium4\src\main\java\learnings" />
+      <recent name="F:\ABD\GitHub\Selenium4\src\main\java\org\example\utilities" />
+      <recent name="F:\ABD\GitHub\Selenium4\src\main\java\features" />
+      <recent name="F:\ABD\GitHub\Selenium4\src\test\java\features\step_definitions" />
+      <recent name="F:\ABD\GitHub\Selenium4\src\test\java\features" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\ABD\GitHub\Selenium4\src\test\java\features\stepDefs" />
+      <recent name="F:\ABD\GitHub\Selenium4\src\main\java\learnings\selenium4example2" />
+      <recent name="F:\ABD\GitHub\Selenium4\src\main\java\learnings\selenium4official" />
+      <recent name="F:\ABD\GitHub\Selenium4\src\test\java\org\example\java8" />
+      <recent name="F:\ABD\GitHub\Selenium4\src\main\java\rough" />
+      <recent name="F:\ABD\GitHub\Selenium4\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="features.extras" />
       <recent name="org.example.runner" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CucumberWithTestNGRunner (1)">
-    <configuration name="MasterThoughtReport" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MasterThoughtReport" />
-      <module name="Selenium4" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CucumberJunit5Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Rough">
+    <configuration name="Rough" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="rough.Rough" />
       <module name="Selenium4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.runner.*" />
+          <option name="PATTERN" value="rough.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.runner" />
-      <option name="MAIN_CLASS_NAME" value="org.example.runner.CucumberJunit5Test" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CucumberWithJUnit4Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: Selenium4" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Selenium4.feature" />
+      <option name="GLUE" value="org.example.hooks org.example.step_definitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Selenium4" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <shortenClasspath name="NONE" />
+      <option name="SUGGESTED_NAME" value="Feature: Selenium4" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.runner.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.runner" />
-      <option name="MAIN_CLASS_NAME" value="org.example.runner.CucumberWithJUnit4Runner" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CucumberWithTestNGRunner (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Capture screenshot of specific web element:" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Selenium4.feature" />
+      <option name="GLUE" value="org.example.hooks org.example.step_definitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Selenium4" />
+      <option name="NAME_FILTER" value="^Capture screenshot of specific web element\:$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Capture screenshot of specific web element\:$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Capture screenshot of specific web element:" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.runner.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.runner" />
-      <option name="MAIN_CLASS_NAME" value="org.example.runner.CucumberWithTestNGRunner" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CucumberWithTestNGRunner" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Open the new tab on the browser" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Selenium4.feature" />
+      <option name="GLUE" value="org.example.hooks org.example.step_definitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Selenium4" />
+      <option name="NAME_FILTER" value="^Open the new tab on the browser$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Open the new tab on the browser$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Open the new tab on the browser" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CucumberWithTestNGRunner" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Selenium4MVN" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="verify" />
+                <option value="-Dcucumber.filter.tags=@debug" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Rough" />
+      <item itemvalue="Cucumber Java.Scenario: Capture screenshot of specific web element:" />
+      <item itemvalue="Cucumber Java.Scenario: Open the new tab on the browser" />
+      <item itemvalue="Cucumber Java.Feature: Selenium4" />
+      <item itemvalue="Java Scratch.Scratch" />
+      <item itemvalue="Maven.Selenium4MVN" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CucumberWithTestNGRunner (1)" />
-        <item itemvalue="JUnit.CucumberWithJUnit4Runner" />
-        <item itemvalue="JUnit.CucumberJunit5Test" />
-        <item itemvalue="Application.MasterThoughtReport" />
-        <item itemvalue="TestNG.CucumberWithTestNGRunner" />
+        <item itemvalue="Application.Rough" />
+        <item itemvalue="Cucumber Java.Scenario: Open the new tab on the browser" />
+        <item itemvalue="Cucumber Java.Scenario: Capture screenshot of specific web element:" />
+        <item itemvalue="Cucumber Java.Feature: Selenium4" />
+        <item itemvalue="Java Scratch.Scratch" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +246,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663125644192</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hooks added">
+      <created>1663129730511</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663129730511</updated>
+    </task>
+    <task id="LOCAL-00003" summary="first commit">
+      <created>1665918919301</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665918919301</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +275,26 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="hooks added" />
     <MESSAGE value="first commit" />
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rough/Rough.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

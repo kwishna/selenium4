@@ -1,27 +1,25 @@
 package org.example.drivers.service;
 
 import org.example.enums.Browsers;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.service.DriverService;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class ServiceManager {
 
-    private static final ThreadLocal<DriverService> DRIVER_THREAD_LOCAL = ThreadLocal.withInitial(() -> null);
+    private static DriverService service;
 
     private static DriverService getDriverService(Browsers browser) {
-        if (DRIVER_THREAD_LOCAL.get() == null) {
-            DriverService.Builder builder = BrowserService.getBrowserService(browser);
-            DriverService service = builder.build();
-            DRIVER_THREAD_LOCAL.set(service);
-        }
-        return DRIVER_THREAD_LOCAL.get();
+        return BrowserService.getBrowserService(browser).build();
     }
 
     public static URL startBrowserService(Browsers browser) {
         try {
-            DriverService service = getDriverService(browser);
+            service = getDriverService(browser);
             if (!service.isRunning()) {
                 service.start();
             }
@@ -32,11 +30,8 @@ public class ServiceManager {
     }
 
     public static void stopBrowserService() {
-        if (DRIVER_THREAD_LOCAL.get() != null) {
-            DriverService service = DRIVER_THREAD_LOCAL.get();
-            if (service.isRunning()) {
-                service.stop();
-            }
+        if (service != null && service.isRunning()) {
+            service.close();
         }
     }
 }

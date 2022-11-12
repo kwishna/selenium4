@@ -6,23 +6,28 @@ Feature: As a test-enginner
   Background:
     Given Selenium4 Webdriver "chrome" browser is started
 
-    Scenario: Valid Google Search
-      When I open "google" home page
-      Then I verify doc string pramater
+  @smoke
+  Scenario Outline: Valid Google Search
+    When I open "google" home page
+    Then I verify doc string parameter
         """
             Some Title, Eh?
             ===============
             Here is the first paragraph of my blog post. Lorem ipsum dolor sit amet,
             consectetur adipiscing elit.
         """
-      Then I should be navigated to "google" search page
-      When I enter a search keyword <keyword> in search field
+    Then I should be navigated to "google" search page
+    When I enter a search "<keyword>" in search field
+    Then I verify following data table:
+      | firstName   | lastName | birthDate  |
+      | Annie M. G. | Schmidt  | 1911-03-20 |
+      | Roald       | Dahl     | 1916-09-13 |
+      | Astrid      | Lindgren | 1907-11-14 |
 
-      Then I verify following data table:
-        | firstName   | lastName | birthDate  |
-        | Annie M. G. | Schmidt  | 1911-03-20 |
-        | Roald       | Dahl     | 1916-09-13 |
-        | Astrid      | Lindgren | 1907-11-14 |
+    Examples:
+      | keyword |
+      | Apple   |
+      | Mango   |
 
 #    java type: List<List<String>>
 #    [

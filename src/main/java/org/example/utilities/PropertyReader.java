@@ -26,6 +26,13 @@ public class PropertyReader {
         return configProp.getProperty(key);
     }
 
+    public static void setConfig(String key, String value) {
+        if (configProp == null) {
+            getConfig("");
+        }
+        configProp.setProperty(key, value);
+    }
+
     public String getValue(String key) {
         try {
             if (properties == null) {
