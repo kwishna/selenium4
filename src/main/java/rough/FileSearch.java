@@ -10,8 +10,8 @@ import java.nio.file.Paths;
 import java.util.Collection;
 
 class FileSearch {
-    private static final String[] extensions = new String[]{"java"};
-    private static final String searchWord = "ChromeDriverService";
+    private static final String[] extensions = new String[]{"java", "groovy"};
+    private static final String searchWord = "groovy";
     //    private static final String path = System.getProperty("user.dir");
     private static final String path = "F:\\ABD";
 

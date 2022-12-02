@@ -50,6 +50,7 @@ public class Rough {
                 Optional.empty()
         ));
 
+        // Raw Way To Use DevTools
         driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", Map.of(
                 "width", 500,
                 "height", 600,

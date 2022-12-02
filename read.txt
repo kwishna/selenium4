@@ -15,6 +15,75 @@ Parameter Type	    Description
 {short}	            Matches the same as {int}, but converts to a 16 bit signed integer if the platform supports it.
 {long}	            Matches the same as {int}, but converts to a 64 bit signed integer if the platform supports it.
 
+------------------------------------------------------------------------------------------------------------------------
+https://goessner.net/articles/JsonPath/index.html
+------------------------------------------------------------------------------------------------------------------------
+JSONPath	    Description
+$	            the root object/element
+@	            the current object/element
+. or []	        child operator
+..	            recursive descent. JSONPath borrows this syntax from E4X.
+*	            wildcard. All objects/elements regardless their names.
+[]	            subscript operator. XPath uses it to iterate over element collections and for predicates. In Javascript and JSON it is the native array operator.
+[,]	            Union operator in XPath results in a combination of node sets. JSONPath allows alternate names or array indices as a set.
+[start:end:step]	array slice operator borrowed from ES4.
+?()	            applies a filter (script) expression.
+()	            script expression, using the underlying script engine.
+------------------------------------------------------------------------------------------------------------------------
+https://advancedtestautomation.blogspot.com/2020/03/tricks-to-query-or-filter-json-using.html
+------------------------------------------------------------------------------------------------------------------------
+{
+   "store":{
+      "book":[
+         {
+            "category":"reference",
+            "author":"Nigel Rees",
+            "title":"Sayings of the Century",
+            "price":8.95
+         },
+         {
+            "category":"fiction",
+            "author":"Evelyn Waugh",
+            "title":"Sword of Honour",
+            "price":12.99
+         },
+         {
+            "category":"horror",
+            "author":"Herman Melville",
+            "title":"Moby Dick",
+            "isbn":"0-553-21311-3",
+            "price":8.99
+         },
+         {
+            "category":"fiction",
+            "author":"J. R. R. Tolkien",
+            "title":"The Lord of the Rings",
+            "isbn":"0-395-19395-8",
+            "price":22.99
+         }
+      ],
+      "bicycle":{
+         "color":"red",
+         "price":19.95
+      }
+   },
+   "city":"Bangalore"
+}
 
-
+Scenario	                                                        Json Path Syntax - Examples
+---------                                                           ----------------------------
+Extracting a single element value	                                store.bicycle.color
+Extracting a single element based on index in an array	            store.book[1].title
+Extracting a single element from the last item in the array	        store.book[-1].title
+Extracting a set of element values                                  store.book[*].title
+Extracting a list from json                                         store.book[*]
+Filtering the list based on the specific value in a node	        store.book.findAll{it.category=='reference'}
+Filtering the list based on the different values in a node	        store.book.findAll{it.category in ['reference','fiction']}
+Filtering the list based on the specific value in a node and finding number of occurrences	store.book.findAll{it.category=='reference'}.size()
+Filtering the list using < or >	                                    store.book.findAll{it.price < 12.0}
+Filtering the list using logical operators: Using !=	            store.book.findAll{it.category!='reference'}
+Using ||	                                                        store.book.findAll{it.category=='reference' || it.category=='fiction'}
+Using && (~between Condn.)                                          store.book.findAll{it.category=='reference' && it.category=='fiction'}
+Filtering the list if a node contains a value which may start and end any character
+                                                                    store.book.findAll{it.category=~/ref.*/ || it.category=~/icti.*/}
 
