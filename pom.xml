@@ -68,28 +68,28 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.6.0</version>
+            <version>4.7.1</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.6.1</version>
+            <version>7.7.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java8</artifactId>
-            <version>7.8.1</version>
+            <version>7.10.1</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
-            <version>7.8.1</version>
+            <version>7.10.1</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>7.8.1</version>
+            <version>7.10.1</version>
         </dependency>
         <!--
         <dependency>
@@ -98,20 +98,16 @@
              <version>7.7.0</version>
         </dependency>
         -->
-        <!--
-            <dependency>
-               <groupId>net.masterthought</groupId>
-               <artifactId>cucumber-reporting</artifactId>
-               <version>5.7.3</version>
-           </dependency>
-           -->
-        <!--
-                <dependency> &lt;!&ndash; plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"} &ndash;&gt;
-                   <groupId>tech.grasshopper</groupId>
-                   <artifactId>extentreports-cucumber7-adapter</artifactId>
-                   <version>1.7.0</version>
-               </dependency>
-          -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.7.4</version>
+        </dependency>
+        <dependency> <!-- plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"} -->
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>1.9.2</version>
+        </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest</artifactId>
@@ -140,17 +136,37 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            <version>4.5.13</version>
+            <version>4.5.14</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-devtools-v105</artifactId>
-            <version>4.5.3</version>
+            <version>4.6.0</version>
         </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>5.2.0</version>
+            <version>5.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumberjson-plugin</artifactId>
+            <version>2.15.0</version>
         </dependency>
     </dependencies>
 
@@ -243,28 +259,49 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--<plugin>
-                <groupId>net.masterthought</groupId>
-                <artifactId>cucumber-reporting</artifactId>
-                <version>5.7.3</version>
-                <executions>
-                    <execution>
-                        <id>execution</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <projectName>Selenium4</projectName>
-                            <outputDirectory>${project.build.directory}/MasterThoughtReport/cucumber-reports
-                            </outputDirectory>
-                            <cucumberOutput>${project.build.directory}/cucumber/cucumber.json</cucumberOutput>
-                            <skippedFails>true</skippedFails>
-                            <enableFlashCharts>false</enableFlashCharts>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>-->
+            <!--            <plugin>
+                            <groupId>tech.grasshopper</groupId>
+                            <artifactId>extentreports-cucumberjson-plugin</artifactId>
+                            <version>2.15.0</version>
+                            <executions>
+                                <execution>
+                                    <id>report</id>
+                                    <phase>post-integration-test</phase>
+                                    <goals>
+                                        <goal>extentreport</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                            <configuration>
+                                <cucumberJsonReportDirectory>${project.build.directory}/cucumber-reports
+                                </cucumberJsonReportDirectory>
+                                <extentPropertiesDirectory>${project.basedir}/src/test/resources</extentPropertiesDirectory>
+                                <displayAllHooks>false</displayAllHooks>
+                                <strictCucumber6Behavior>true</strictCucumber6Behavior>
+                            </configuration>
+                        </plugin>-->
+            <!--            <plugin>
+                            <groupId>net.masterthought</groupId>
+                            <artifactId>cucumber-reporting</artifactId>
+                            <version>5.7.3</version>
+                            <executions>
+                                <execution>
+                                    <id>execution</id>
+                                    <phase>test</phase>
+                                    <goals>
+                                        <goal>generate</goal>
+                                    </goals>
+                                    <configuration>
+                                        <projectName>Selenium4</projectName>
+                                        <outputDirectory>${project.build.directory}/MasterThoughtReport/cucumber-reports
+                                        </outputDirectory>
+                                        <cucumberOutput>${project.build.directory}/cucumber/cucumber.json</cucumberOutput>
+                                        <skippedFails>true</skippedFails>
+                                        <enableFlashCharts>false</enableFlashCharts>
+                                    </configuration>
+                                </execution>
+                            </executions>
+                        </plugin>-->
             <!-- <plugin>
                  <groupId>tech.grasshopper</groupId>
                  <artifactId>cucumber-pdf-plugin</artifactId>

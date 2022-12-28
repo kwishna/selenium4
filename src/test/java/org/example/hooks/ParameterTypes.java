@@ -17,5 +17,4 @@ public class ParameterTypes {
     public Object transformer(Object fromValue, Type toValueType) {
         return objectMapper.convertValue(fromValue, objectMapper.constructType(toValueType));
     }
-
 }

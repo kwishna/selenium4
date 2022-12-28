@@ -325,5 +325,5 @@ public class JPaths {
             assert nums.swap(0, 2) == [3, 2, 1] as int[]
      */
 
-    // https://docs.groovy-lang.org/latest/html/api/org/codehaus/groovy/runtime/DefaultGroovyMethods.htm
+    // https://docs.groovy-lang.org/latest/html/api/org/codehaus/groovy/runtime/DefaultGroovyMethods.html
 }
